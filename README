@@ -1,0 +1,4 @@
+#Install
+ln -s /opt/webhook/webhook.service webhook.service
+systemctl enable webhook.service
+systemctl start webhook.service
