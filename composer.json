@@ -13,10 +13,5 @@
     },
     "config": {
         "process-timeout" : 0
-    },
-    "scripts": {
-      "start": "php -S 0.0.0.0:1701 -t /opt/webhook 2>&1 | tee /var/log/webhook.log",
-      "sync": "clear && rsync -rvaz --delete --exclude=.git --exclude=vendor ../webhook/* refinity.ch:/opt/webhook/",
-      "watch": "onchange -v -d 10000 '**/*'  -- composer sync"
     }
 }
