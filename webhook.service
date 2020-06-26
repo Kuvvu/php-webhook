@@ -3,9 +3,9 @@ Description=Github Webhook Server
 After=home.mount network.target
 
 [Service]
-User=root
-Group=root
-ExecStart=/usr/bin/php -S 0.0.0.0:1701 -t /opt/webhook 2>&1 | tee /var/log/webhook.log
+User=
+Group=
+ExecStart=/usr/bin/php -S 0.0.0.0:1701 -t /opt/webhook
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=on-failure
