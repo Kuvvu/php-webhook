@@ -1,6 +1,14 @@
 # Installation
 
-##### 1. Clone the directory
+##### 1. With Composer or GitHub
+
+Install with Composer
+
+```
+composer create-project kuvvu/php-webhook webhook
+```
+
+or with GitHub
 
 ```
 git clone https://github.com/Kuvvu/php-webhook.git /opt/webhook
