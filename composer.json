@@ -2,6 +2,7 @@
     "name": "kuvvu/php-webhook",
     "type": "project",
     "minimum-stability": "dev",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Simon Jenny",
