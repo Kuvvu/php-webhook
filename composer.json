@@ -1,6 +1,7 @@
 {
     "name": "kuvvu/php-webhook",
     "type": "project",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Simon Jenny",
