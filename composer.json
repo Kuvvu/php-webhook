@@ -1,7 +1,7 @@
 {
     "name": "kuvvu/php-webhook",
     "type": "project",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Simon Jenny",
@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+      "kuvvu/php-webhook": "dev-master",
       "vlucas/phpdotenv": "^4.1",
       "phpmailer/phpmailer": "^6.1"
     },
