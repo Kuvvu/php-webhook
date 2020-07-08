@@ -21,7 +21,7 @@ class Mail
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->Subject    = $repository." - WebHook Push Event";
-        $mail->Body       = '<h3>'.$subject.'</h3><br><pre>'.$message.'</pre>';
+        $mail->Body       = '<h3>'.$subject.'</h3><pre>'.$message.'</pre>';
         $mail->CharSet    = 'UTF-8';
         $mail->Encoding   = 'base64';
 
