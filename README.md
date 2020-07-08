@@ -9,7 +9,7 @@ git clone https://github.com/Kuvvu/php-webhook.git /opt/webhook
 
 Composer
 ```
-composer create-project kuvvu/php-webhook:dev-master
+composer create-project kuvvu/php-webhook:dev-master /opt/webhook
 ```
 
 ##### 2. Install Composer Dependencies
