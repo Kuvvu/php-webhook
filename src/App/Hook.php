@@ -57,7 +57,7 @@ class Hook
     	case 'push':
         $result = shell_exec($config[$payload->repository->name]);
         echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
-        Mail::send($payload->repository->name, $payload->repository->name." - Event : $_SERVER[HTTP_X_GITHUB_EVENT] Result :\n", $result);
+        Mail::send($payload->repository->name, "Event : $_SERVER[HTTP_X_GITHUB_EVENT] Result :", $result);
     		break;
 
     	default:
