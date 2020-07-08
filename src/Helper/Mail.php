@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 class Mail
 {
 
-  public static function send($subject ,$message){
+  public static function send($repository, $subject ,$message){
 
     $mail = new PHPMailer(true);
 
@@ -20,8 +20,8 @@ class Mail
         $mail->Password   = $_ENV['SMTP_PASS'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
-        $mail->Subject    = "WebHook Push Event";
-        $mail->Body       = $subject.PHP_EOL.\json_decode($message);
+        $mail->Subject    = $repository." - WebHook Push Event";
+        $mail->Body       = $subject.PHP_EOL.$message;
         $mail->CharSet    = 'UTF-8';
         $mail->Encoding   = 'base64';
 
