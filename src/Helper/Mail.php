@@ -20,8 +20,8 @@ class Mail
         $mail->Password   = $_ENV['SMTP_PASS'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
-        $mail->Subject    = $subject;
-        $mail->Body       = $message;
+        $mail->Subject    = "WebHook Push Event";
+        $mail->Body       = $subject.PHP_EOL.\json_decode($message);
         $mail->CharSet    = 'UTF-8';
         $mail->Encoding   = 'base64';
 
