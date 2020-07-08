@@ -44,6 +44,11 @@ and fill out the variables accordingly (example)
 ```
 SECRET=967B3F47-16D9-4583-B966-F2497968DE61
 CONFIG="/opt/webhook/config.json"
+
+SMTP = mail.mailserver.com
+SMTP_USER = user
+SMTP_PASS = password
+EMAIL = receipient email
 ```
 
 ##### 5. Install WebHook service
