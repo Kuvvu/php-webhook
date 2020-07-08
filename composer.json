@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-      "kuvvu/php-webhook": "dev-master",
       "vlucas/phpdotenv": "^4.1",
       "phpmailer/phpmailer": "^6.1"
     },
