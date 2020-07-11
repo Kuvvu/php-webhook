@@ -1,3 +1,7 @@
+# What is it for?
+
+php-webhook is a simple webhook server to use with github webhooks. Altough I know that there are several webhook servers out there, we did not wanted to install another language like go, python or else on our php based project servers. So I wrote this litte tool to be used with the already installed php version on our servers.
+
 # Installation
 
 ##### 1. With GitHub or Composer
