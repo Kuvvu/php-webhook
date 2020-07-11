@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>php-webhook by Kuvvu</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>php-webhook</h1>
+        <p>Simple Github Webhook Server</p>
+
+        <p class="view"><a href="https://github.com/Kuvvu/php-webhook">View the Project on GitHub <small>Kuvvu/php-webhook</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Kuvvu/php-webhook/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Kuvvu/php-webhook/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Kuvvu/php-webhook">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="what-is-it-for" class="anchor" href="#what-is-it-for" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What is it for?</h1>
+<p>php-webhook is a simple webhook server to use with github webhooks. Altough I know that there are several webhook servers out there, we did not wanted to install another language like go, python or else on our php based project servers. So I wrote this litte tool to be used with the already installed php version on our servers.</p>
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
+<h5>
+<a id="1-with-github-or-composer" class="anchor" href="#1-with-github-or-composer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. With GitHub or Composer</h5>
+<p>GitHub</p>
+<pre><code>git clone https://github.com/Kuvvu/php-webhook.git /opt/webhook
+</code></pre>
+<p>Composer</p>
+<pre><code>composer create-project kuvvu/php-webhook:dev-master /opt/webhook
+</code></pre>
+<h5>
+<a id="2-install-composer-dependencies" class="anchor" href="#2-install-composer-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Install Composer Dependencies</h5>
+<pre><code>cd /opt/webhook
+composer install
+</code></pre>
+<h5>
+<a id="3-create-config-file" class="anchor" href="#3-create-config-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Create Config File</h5>
+<pre><code>cp config.json.example config.json
+</code></pre>
+<p>and fill out the variables accordingly (example)</p>
+<pre><code>{
+  "php-webhook": "cd /opt/webhook &amp;&amp; git pull"
+}
+</code></pre>
+<h5>
+<a id="4-create-env-file" class="anchor" href="#4-create-env-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Create .env File</h5>
+<pre><code>cp .env.example .env
+</code></pre>
+<p>and fill out the variables accordingly (example)</p>
+<pre><code>SECRET=967B3F47-16D9-4583-B966-F2497968DE61
+CONFIG="/opt/webhook/config.json"
+
+SMTP = mail.mailserver.com
+SMTP_USER = user
+SMTP_PASS = password
+EMAIL = receipient email
+</code></pre>
+<h5>
+<a id="5-install-webhook-service" class="anchor" href="#5-install-webhook-service" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Install WebHook service</h5>
+<p>You can change the User and Port within the webhook.service file according to your needs. Beware that the webhook service will execute all configured commands with this user.</p>
+<pre><code>cd /etc/systemd/system
+ln -s /opt/webhook/webhook.service webhook.service
+systemctl enable webhook.service
+systemctl start webhook.service
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Kuvvu">Kuvvu</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
